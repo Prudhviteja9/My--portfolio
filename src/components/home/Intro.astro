@@ -2,8 +2,6 @@
 import Card from "../global/Card.astro";
 import Socials from "../socials/Socials.astro";
 import Greeting from "./Greeting.svelte";
-import pfp_new from "../images/pfp_new.webp";
-import { Image } from "astro:assets";
 ---
 
 <div class="w-[90%] md:w-[600px] lg:w-1/2">
@@ -12,9 +10,9 @@ import { Image } from "astro:assets";
 			<div class="w-full px-5 pt-10 pb-2 lg:px-10">
 				<div class="flex h-20 flex-row">
 					<div class="mr-1 flex w-20 items-center justify-center">
-						<Image
-							src={pfp_new}
-							alt="Ryan"
+						<img
+							src="/images/profile/contact_photo.png"
+							alt="Prudhvi Teja Yedla"
 							width="80"
 							height="80"
 							class="max-w-full rounded-full bg-[#505050]"
@@ -26,9 +24,9 @@ import { Image } from "astro:assets";
 							id="name"
 							class="animate-gradient text-2xl font-bold"
 						>
-							RythonDev
+							Prudhvi Teja Yedla
 						</div>
-						<div class="w-full text-xl">Full Stack Developer</div>
+						<div class="w-full text-xl">AI & ML Engineer</div>
 					</div>
 				</div>
 				<div id="uwu" class="hidden items-center justify-center">
@@ -40,13 +38,10 @@ import { Image } from "astro:assets";
 					/>
 				</div>
 				<div class="mt-5 mb-5 text-2xl font-bold">
-					<Greeting client:load />, <br class="sm:hidden" />I'm Ryan!
+					<Greeting client:load />, <br class="sm:hidden" />I'm Prudhvi!
 				</div>
 				<p class="text-left">
-					A Malaysian software developer studying in Australia, fluent
-					in English and Mandarin Chinese. My work in software
-					development has connected me with many Twitch streamers and
-					content creators.
+					Innovative AI & Data Analyst with an M.S. in Data Science & Analytics, now focusing on ML/CV engineering. I build end-to-end AI solutions using Python, PyTorch, YOLOv8, DeepLabv3, ONNX/TFLite, LangChain, and OpenAI APIs, improving model accuracy (80–90%+), automation, and business KPIs.
 				</p>
 
 				<div class="mt-8 flex flex-row items-center justify-center">

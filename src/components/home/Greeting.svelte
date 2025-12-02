@@ -28,12 +28,14 @@
 
 	let greeting: string = "";
 
-	if (hour >= 0 && hour < 12) {
+	if (hour >= 5 && hour < 12) {
 		greeting = "morning";
 	} else if (hour >= 12 && hour < 18) {
 		greeting = "afternoon";
-	} else if (hour >= 18) {
+	} else if (hour >= 18 && hour < 22) {
 		greeting = "evening";
+	} else {
+		greeting = "night";
 	}
 
 	let greetingState: string = $state("");

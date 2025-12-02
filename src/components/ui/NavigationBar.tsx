@@ -104,8 +104,8 @@ export const HoverNavigation = ({
 					<div className="mr-2 flex items-center justify-center sm:mr-3">
 						<a href="/">
 							<img
-								src="/images/profile/contact_photo_small.webp"
-								alt="Ryan"
+								src="/images/profile/contact_photo.png"
+								alt="Prudhvi Teja Yedla"
 								width={50}
 								className="rounded-full"
 							/>

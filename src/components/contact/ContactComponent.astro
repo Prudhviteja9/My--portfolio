@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import contactPhoto from "@/components/images/contact_photo.webp";
 import { AnimatedTooltip } from "@/components/ui/AnimatedToolTip";
 ---
 
@@ -10,10 +8,10 @@ import { AnimatedTooltip } from "@/components/ui/AnimatedToolTip";
 	<div
 		class="relative flex aspect-[3/4] w-[300px] items-end justify-end lg:aspect-auto lg:w-1/2"
 	>
-		<Image
-			src={contactPhoto}
-			alt="Ryan"
-			width={300}
+		<img
+			src="/images/profile/contact_photo.png"
+			alt="Prudhvi Teja Yedla"
+			width="300"
 			loading="lazy"
 			class="absolute top-1/2 left-1/2 aspect-[3/4] -translate-1/2 rounded-3xl object-cover lg:top-0 lg:right-0 lg:-translate-x-10 lg:translate-y-5"
 		/>
@@ -33,11 +31,11 @@ import { AnimatedTooltip } from "@/components/ui/AnimatedToolTip";
 
 		<div class="mt-10 flex w-fit items-center justify-center">
 			<AnimatedTooltip
-				href="mailto:rythondev@gmail.com"
+				href="mailto:yedlaprudhviteja9@gmail.com"
 				text="Email me!"
 				client:visible
 				className="text-xl font-bold underline transition-colors duration-75 hover:text-blue-500"
-				>rythondev@gmail.com</AnimatedTooltip
+				>yedlaprudhviteja9@gmail.com</AnimatedTooltip
 			>
 		</div>
 	</div>

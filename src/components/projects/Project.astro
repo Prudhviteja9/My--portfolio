@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 interface Tag {
 	text: string;
 	textColor: string;
@@ -9,7 +7,7 @@ interface Tag {
 
 interface Props {
 	position?: "left" | "right";
-	image?: ImageMetadata;
+	imageSrc?: string;
 	alt?: string;
 	href: string;
 	title: string;
@@ -19,7 +17,7 @@ interface Props {
 }
 
 const {
-	image,
+	imageSrc,
 	alt,
 	href,
 	title,
@@ -41,35 +39,37 @@ const leftProject = position == "left";
 	>
 		<slot />
 		{
-			image && alt &&
+			imageSrc && alt &&
 			(
-				<Image
-					src={image}
-					alt={alt}
-					class={`absolute max-w-full
-							aspect-video
-							opacity-40
-							border-2 border-solid border-white rounded-xl
-							top-1/2 left-1/2
-							background-img`}
-					class:list={leftProject
-						? "left"
-						: "right"}
-					width={700}
-				/>
-				<Image
-					src={image}
-					alt={alt}
-					width={700}
-					class={`absolute max-w-full
-							aspect-video
-							opacity-100
-							border-2 border-solid border-white rounded-xl
-							top-1/2 left-1/2 frontfacing-img`}
-					class:list={leftProject
-						? "left"
-						: "right"}
-				/>
+				<>
+					<img
+						src={imageSrc}
+						alt={alt}
+						class={`absolute max-w-full
+								aspect-video
+								opacity-40
+								border-2 border-solid border-white rounded-xl
+								top-1/2 left-1/2
+								background-img`}
+						class:list={leftProject
+							? "left"
+							: "right"}
+						width={700}
+					/>
+					<img
+						src={imageSrc}
+						alt={alt}
+						width={700}
+						class={`absolute max-w-full
+								aspect-video
+								opacity-100
+								border-2 border-solid border-white rounded-xl
+								top-1/2 left-1/2 frontfacing-img`}
+						class:list={leftProject
+							? "left"
+							: "right"}
+					/>
+				</>
 			)
 		}
 		

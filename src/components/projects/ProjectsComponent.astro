@@ -1,8 +1,4 @@
 ---
-import TaskWidget from "./TaskWidget.svelte";
-import CoworkingGuide from "../images/projects/coworking-guide.webp";
-import Wnrs from "../images/projects/wnrs.webp";
-import VideoProject from "./VideoProject.svelte";
 import Project from "./Project.astro";
 ---
 
@@ -13,77 +9,95 @@ import Project from "./Project.astro";
 	<div class="w-full max-w-[1440px]">
 		<Project
 			position="left"
-			image={CoworkingGuide}
-			alt="coworking guide"
-			href="https://coworking-guide.vercel.app/"
-			title="Coworking Guide"
-			label="Visit Site"
-			description="A guide to coworking streams for streamers, covers wide range of topics from tips on how to get started with setting up stream to how to grow your audience!"
+			imageSrc="/images/projects/Real-Time Object Counter for Retail Shelves.png"
+			alt="Real-Time Object Counter for Retail Shelves"
+			href="https://github.com/Prudhviteja9"
+			title="Real-Time Object Counter for Retail Shelves"
+			label="View Repository"
+			description="A real-time computer vision solution that detects and counts products on retail shelves using YOLOv8 and PyTorch. Optimized with TFLite for on-device deployment and integrated with OpenCV for video stream processing."
 			tags={[
 				{
-					text: "Astro",
-					bgColor: "white",
-					textColor: "black",
-				},
-				{
-					text: "TypeScript",
-					bgColor: "#3178C6",
+					text: "PyTorch",
+					bgColor: "var(--color-pytorch)",
 					textColor: "white",
 				},
 				{
-					text: "Markdown",
-					bgColor: "black",
+					text: "YOLOv8",
+					bgColor: "var(--color-yolo)",
+					textColor: "white",
+				},
+				{
+					text: "TFLite",
+					bgColor: "var(--color-tensorflow)",
+					textColor: "white",
+				},
+				{
+					text: "OpenCV",
+					bgColor: "var(--color-opencv)",
 					textColor: "white",
 				},
 			]}
 		/>
 
-		<VideoProject
-			client:visible
-			image_src="/images/projects/aim-lab.webp"
-			image_alt="Computer Vision AimLab Bot"
+		<Project
 			position="right"
-			video_src="/videos/aim_lab_demo.webm"
-			title="Computer Vision AimLab Bot"
-			description={`
-                A script that plays AimLab, a game that helps improve your aim in FPS games. Uses OpenCV to detect the targets and win32API to move the mouse and click.
-            `}
+			imageSrc="/images/projects/Image Segmentation.png"
+			alt="Image Segmentation Pipeline with CoreML Export"
+			href="https://github.com/Prudhviteja9"
+			title="Image Segmentation Pipeline with CoreML Export"
+			label="View Repository"
+			description="End-to-end image segmentation pipeline using DeepLabv3 in PyTorch with automated CoreML export. Includes heavy data augmentation techniques and supports iOS deployment through CoreMLTools."
 			tags={[
 				{
-					text: "Python",
+					text: "PyTorch",
+					bgColor: "var(--color-pytorch)",
 					textColor: "white",
-					bgColor: "var(--color-python)",
+				},
+				{
+					text: "DeepLabv3",
+					bgColor: "var(--color-segmentation)",
+					textColor: "white",
+				},
+				{
+					text: "CoreMLTools",
+					bgColor: "var(--color-coreml)",
+					textColor: "white",
 				},
 				{
 					text: "OpenCV",
-					textColor: "white",
 					bgColor: "var(--color-opencv)",
-				},
-				{
-					text: "win32API",
 					textColor: "white",
-					bgColor: "var(--color-win32api)",
 				},
 			]}
 		/>
 
 		<Project
 			position="left"
-			image={Wnrs}
-			alt="We're not really strangers"
-			href="https://liyunze-coding.github.io/wnrs/"
-			label="Visit Site"
-			title="We're not really strangers"
-			description="This is a digital adaptation of the popular card game designed to foster meaningful connections through engaging questions and prompts. Made into a PWA for offline usage on mobile!"
+			imageSrc="/images/projects/Robust Vision Model.png"
+			alt="Robust Vision Model with Heavy Augmentations"
+			href="https://github.com/Prudhviteja9"
+			title="Robust Vision Model with Heavy Augmentations"
+			label="View Repository"
+			description="A robust computer vision model built with ResNet18 and PyTorch, enhanced with heavy data augmentation for improved generalization. Exported to ONNX format for cross-platform compatibility and inference optimization."
 			tags={[
 				{
-					text: "React",
-					bgColor: "var(--color-react)",
-					textColor: "black",
+					text: "PyTorch",
+					bgColor: "var(--color-pytorch)",
+					textColor: "white",
 				},
 				{
-					text: "TypeScript",
-					bgColor: "var(--color-typescript)",
+					text: "ResNet18",
+					bgColor: "var(--color-resnet)",
+					textColor: "white",
+				},
+				{
+					text: "ONNX",
+					bgColor: "var(--color-onnx)",
+					textColor: "white",
+				},
+				{
+					text: "Data Augmentation",
+					bgColor: "var(--color-augment)",
 					textColor: "white",
 				},
 			]}
@@ -91,75 +105,115 @@ import Project from "./Project.astro";
 
 		<Project
 			position="right"
-			href="https://github.com/liyunze-coding/chat-task-tic-overlay-infinity"
-			title="Chat-task-tic widget"
+			imageSrc="/images/projects/AI Resume Screener.png"
+			alt="AI Resume Screener"
+			href="https://github.com/Prudhviteja9"
+			title="AI Resume Screener"
 			label="View Repository"
-			description={`
-				Used by 100+ Twitch streamers, allow viewers and streamers
-				to add their own tasks to the widget for accountability!
-				Easy to setup and the customization possibilities are
-				endless!`}
+			description="An intelligent resume screening tool powered by LangChain and OpenAI APIs. Automatically parses, extracts key information, and scores resumes based on job requirements. Built with Streamlit for easy deployment."
 			tags={[
 				{
-					text: "HTML",
-					bgColor: "var(--color-html)",
+					text: "LangChain",
+					bgColor: "var(--color-langchain)",
 					textColor: "white",
 				},
 				{
-					text: "CSS",
-					bgColor: "var(--color-blue-600)",
+					text: "OpenAI API",
+					bgColor: "var(--color-openai)",
 					textColor: "white",
 				},
 				{
-					text: "Javascript",
-					bgColor: "var(--color-yellow-500)",
-					textColor: "black",
+					text: "Streamlit",
+					bgColor: "var(--color-streamlit)",
+					textColor: "white",
+				},
+				{
+					text: "Python",
+					bgColor: "var(--color-python)",
+					textColor: "white",
 				},
 			]}
-		>
-			<TaskWidget
-				classList={`
-					widget aspect-video
-					[perspective:200px] absolute
-					w-full
-					opacity-10
-					top-1/2 left-1/2
-					background-widget right
-					`}
-				client:visible
-			/>
-			<TaskWidget
-				classList={`
-					widget aspect-video
-					[perspective:200px] absolute 
-					frontfacing-widget right
-					top-1/2 left-1/2
-					w-full`}
-				client:visible
-			/>
-		</Project>
+		/>
+
+		<Project
+			position="left"
+			imageSrc="/images/projects/Sales Profit Performance Dashboard.png"
+			alt="Sales Profit Performance Dashboard"
+			href="https://github.com/Prudhviteja9"
+			title="Sales Profit Performance Dashboard"
+			label="View Repository"
+			description="Interactive Power BI dashboard that visualizes sales performance, profit margins, and KPIs in real-time. Integrated with SQL queries to automate data refresh and provide actionable business insights."
+			tags={[
+				{
+					text: "Power BI",
+					bgColor: "var(--color-powerbi)",
+					textColor: "white",
+				},
+				{
+					text: "SQL",
+					bgColor: "var(--color-sql)",
+					textColor: "white",
+				},
+				{
+					text: "Data Visualization",
+					bgColor: "var(--color-dataviz)",
+					textColor: "white",
+				},
+			]}
+		/>
+
+		<Project
+			position="right"
+			imageSrc="/images/projects/Customer Segmentation & Retention Analytics.png"
+			alt="Customer Segmentation & Retention Analytics"
+			href="https://github.com/Prudhviteja9"
+			title="Customer Segmentation & Retention Analytics"
+			label="View Repository"
+			description="Advanced customer segmentation analysis using Python and statistical methods to identify retention patterns. Provides strategic recommendations to improve customer lifetime value and reduce churn."
+			tags={[
+				{
+					text: "Python",
+					bgColor: "var(--color-python)",
+					textColor: "white",
+				},
+				{
+					text: "Pandas",
+					bgColor: "var(--color-pandas)",
+					textColor: "white",
+				},
+				{
+					text: "Analytics",
+					bgColor: "var(--color-analytics)",
+					textColor: "white",
+				},
+			]}
+		/>
+
+		<Project
+			position="left"
+			imageSrc="/images/projects/Financial Forecasting & Scenario Modeling.png"
+			alt="Financial Forecasting & Scenario Modeling"
+			href="https://github.com/Prudhviteja9"
+			title="Financial Forecasting & Scenario Modeling"
+			label="View Repository"
+			description="Comprehensive financial forecasting model using time-series analysis and scenario modeling. Provides revenue projections and risk analysis to support business planning and strategic decision-making."
+			tags={[
+				{
+					text: "Python",
+					bgColor: "var(--color-python)",
+					textColor: "white",
+				},
+				{
+					text: "Excel",
+					bgColor: "var(--color-excel)",
+					textColor: "white",
+				},
+				{
+					text: "Forecasting",
+					bgColor: "var(--color-forecast)",
+					textColor: "white",
+				},
+			]}
+		/>
 	</div>
 </div>
-
-<style is:global>
-	.image-container img,
-	.image-container .widget,
-	.image-container video {
-		transition: transform 0.5s ease-in-out;
-	}
-
-	@media (min-width: 1025px) {
-		.image-container:hover > img,
-		.image-container:hover .widget,
-		.image-container:hover video {
-			transform: rotateY(0deg) rotateX(0deg) translateZ(0px)
-				translateX(-50%) translateY(-50%);
-		}
-
-		.image-container:hover > .visit-div {
-			opacity: 100%;
-			transition: opacity 0.3s ease-in-out;
-			transition-delay: 0.3s;
-		}
-	}
-</style>

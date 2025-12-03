@@ -4,17 +4,17 @@ import Line from "../global/NetworkLine.astro";
 ---
 
 <div id="Experience" class="h-fit">
-	<h1 class="text-center text-5xl">Experience</h1>
+	<h1 class="text-center text-5xl section-title">Experience</h1>
 	<div class="flex flex-col items-center pt-10">
 		<div class="w-[90%] md:w-[600px] lg:w-1/2">
 			<Card primaryColor="#F6DFD8" className="animate-fadeIn">
 				<div class="px-4 py-4 md:px-8 md:py-8">
 					<div class="mb-3 flex w-full flex-col justify-start gap-1">
-						<h2 class="text-xl font-bold">Corporate Analyst Intern</h2>
-						<h3 class="font-bold">@ Confidential E-commerce/Retail Startup</h3>
-						<h3>Jun 2024 - Present</h3>
+						<h2 class="text-xl font-bold job-title">Corporate Analyst Intern</h2>
+						<h3 class="font-bold company-name">@ Confidential E-commerce/Retail Startup</h3>
+						<h3 class="date-badge">Jun 2024 - Present</h3>
 					</div>
-					<hr class="mb-3 w-full" />
+					<hr class="mb-3 w-full border-[rgba(72,255,255,0.2)]" />
 					<p class="mb-3">
 						Analyze sales, expense, and customer data to find cost-saving and retention opportunities. Build Power BI + SQL dashboards for revenue, margin, and cash flow. Automate weekly reporting with Python + SQL.
 					</p>
@@ -39,11 +39,11 @@ import Line from "../global/NetworkLine.astro";
 			<Card primaryColor="#F6DFD8" className="view-fadeUp">
 				<div class="px-4 py-4 md:px-8 md:py-8">
 					<div class="mb-3 flex w-full flex-col justify-start gap-1">
-						<h2 class="text-xl font-bold">IT Analyst</h2>
-						<h3 class="font-bold">@ Cura GRC Pvt Ltd</h3>
-						<h3>Aug 2021 - May 2023</h3>
+						<h2 class="text-xl font-bold job-title">IT Analyst</h2>
+						<h3 class="font-bold company-name">@ Cura GRC Pvt Ltd</h3>
+						<h3 class="date-badge">Aug 2021 - May 2023</h3>
 					</div>
-					<hr class="mb-3 w-full" />
+					<hr class="mb-3 w-full border-[rgba(72,255,255,0.2)]" />
 					<p class="mb-3">
 						Support IT/data systems for enterprise analytics, ensure high uptime. Improve data pipelines and BI workflows, integrate BI tools. Work with stakeholders on reporting and compliance needs.
 					</p>
@@ -67,3 +67,49 @@ import Line from "../global/NetworkLine.astro";
 		</div>
 	</div>
 </div>
+
+<style>
+	.section-title {
+		animation: titleGlow 3s ease-in-out infinite;
+		letter-spacing: 1px;
+	}
+
+	.job-title {
+		background: linear-gradient(90deg, #ffffff, #72ffff);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: all 0.3s ease;
+	}
+
+	.company-name {
+		color: #16ff00;
+		transition: all 0.3s ease;
+	}
+
+	.date-badge {
+		font-size: 0.875rem;
+		background: rgba(72, 255, 255, 0.1);
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		border: 1px solid rgba(72, 255, 255, 0.3);
+		display: fit-content;
+		transition: all 0.3s ease;
+	}
+
+	.date-badge:hover {
+		border-color: rgba(72, 255, 255, 0.6);
+		background: rgba(72, 255, 255, 0.2);
+	}
+
+	@keyframes titleGlow {
+		0%, 100% {
+			text-shadow: 0 0 10px rgba(72, 255, 255, 0.5),
+				0 0 20px rgba(22, 255, 0, 0.3);
+		}
+		50% {
+			text-shadow: 0 0 20px rgba(72, 255, 255, 0.8),
+				0 0 40px rgba(22, 255, 0, 0.6);
+		}
+	}
+</style>

@@ -1,0 +1,122 @@
+---
+// Subtle floating particles for AI/tech feel without being intrusive
+---
+
+<div class="particles-container">
+	<div class="particle particle-1"></div>
+	<div class="particle particle-2"></div>
+	<div class="particle particle-3"></div>
+	<div class="particle particle-4"></div>
+	<div class="particle particle-5"></div>
+</div>
+
+<style>
+	.particles-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		z-index: 1;
+		overflow: hidden;
+	}
+
+	.particle {
+		position: absolute;
+		background: radial-gradient(circle, rgba(72, 255, 255, 0.4), transparent);
+		border-radius: 50%;
+		filter: blur(2px);
+	}
+
+	.particle-1 {
+		width: 100px;
+		height: 100px;
+		top: 10%;
+		left: 5%;
+		animation: float 25s infinite ease-in-out;
+	}
+
+	.particle-2 {
+		width: 150px;
+		height: 150px;
+		top: 40%;
+		right: 10%;
+		animation: float 30s infinite ease-in-out reverse;
+		animation-delay: -5s;
+	}
+
+	.particle-3 {
+		width: 80px;
+		height: 80px;
+		bottom: 20%;
+		left: 15%;
+		animation: float 35s infinite ease-in-out;
+		animation-delay: -10s;
+	}
+
+	.particle-4 {
+		width: 120px;
+		height: 120px;
+		top: 60%;
+		right: 20%;
+		animation: float 28s infinite ease-in-out reverse;
+		animation-delay: -15s;
+	}
+
+	.particle-5 {
+		width: 90px;
+		height: 90px;
+		bottom: 30%;
+		right: 5%;
+		animation: float 32s infinite ease-in-out;
+		animation-delay: -20s;
+	}
+
+	@keyframes float {
+		0% {
+			transform: translateY(0px) translateX(0px);
+			opacity: 0.3;
+		}
+		50% {
+			transform: translateY(-30px) translateX(20px);
+			opacity: 0.5;
+		}
+		100% {
+			transform: translateY(0px) translateX(0px);
+			opacity: 0.3;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.particle {
+			filter: blur(1px);
+			opacity: 0.6 !important;
+		}
+
+		.particle-1 {
+			width: 60px;
+			height: 60px;
+		}
+
+		.particle-2 {
+			width: 80px;
+			height: 80px;
+		}
+
+		.particle-3 {
+			width: 50px;
+			height: 50px;
+		}
+
+		.particle-4 {
+			width: 70px;
+			height: 70px;
+		}
+
+		.particle-5 {
+			width: 55px;
+			height: 55px;
+		}
+	}
+</style>

@@ -1,0 +1,58 @@
+---
+// Premium glowing gradient line with smooth animation
+interface Props {
+	height?: string;
+	className?: string;
+}
+
+const { height = "50px", className = "" } = Astro.props;
+---
+
+<div class={`gradient-line-container ${className}`} style={`--line-height: ${height}`}>
+	<div class="gradient-line"></div>
+</div>
+
+<style define:vars={{ lineHeight: "var(--line-height)" }}>
+	.gradient-line-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: var(--line-height, 50px) 0;
+	}
+
+	.gradient-line {
+		width: 100%;
+		max-width: 600px;
+		height: 2px;
+		background: linear-gradient(
+			90deg,
+			transparent 0%,
+			rgb(72, 255, 255) 25%,
+			rgb(22, 255, 0) 50%,
+			rgb(72, 255, 255) 75%,
+			transparent 100%
+		);
+		background-size: 200% 100%;
+		animation: lineGlow 4s ease-in-out infinite;
+		box-shadow: 0 0 10px rgba(72, 255, 255, 0.6),
+			0 0 20px rgba(22, 255, 0, 0.3);
+	}
+
+	@keyframes lineGlow {
+		0% {
+			background-position: 200% 0;
+			box-shadow: 0 0 10px rgba(72, 255, 255, 0.6),
+				0 0 20px rgba(22, 255, 0, 0.3);
+		}
+		50% {
+			background-position: -200% 0;
+			box-shadow: 0 0 20px rgba(72, 255, 255, 0.8),
+				0 0 30px rgba(22, 255, 0, 0.5);
+		}
+		100% {
+			background-position: 200% 0;
+			box-shadow: 0 0 10px rgba(72, 255, 255, 0.6),
+				0 0 20px rgba(22, 255, 0, 0.3);
+		}
+	}
+</style>

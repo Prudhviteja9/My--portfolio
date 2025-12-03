@@ -1,0 +1,41 @@
+---
+// Scroll observer component for triggering fade-up animations on view
+interface Props {
+	children?: any;
+}
+---
+
+<div class="scroll-observer-wrapper">
+	<slot />
+</div>
+
+<script>
+	const observerElements = document.querySelectorAll(
+		".view-fadeUp, .scroll-reveal"
+	);
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("view-appear");
+					observer.unobserve(entry.target);
+				}
+			});
+		},
+		{
+			threshold: 0.1,
+			rootMargin: "0px 0px -100px 0px",
+		}
+	);
+
+	observerElements.forEach((element) => {
+		observer.observe(element);
+	});
+</script>
+
+<style>
+	.scroll-observer-wrapper {
+		position: relative;
+	}
+</style>

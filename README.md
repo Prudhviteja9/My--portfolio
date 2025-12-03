@@ -1,39 +1,52 @@
-<div align="center">
-    <img src="./public/images/logo_circle.webp" width="100">
-    <h1>rython.dev</h1>
-    <p>The 4th iteration of Ryan's personal website</p>
-</div>
+# prudhvi.dev
 
-<div align="center">
-    <a href="https://astro.js.org/" target="_blank"><img src="https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE"></a>
-    <a href="https://svelte.dev/" target="_blank"><img src="https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00"></a>
-    <a href="https://tailwindcss.com/" target="_blank"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" target="_blank"></a>
-    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" target="_blank"></a>
-</div>
+The personal portfolio website of **Prudhvi Teja Yedla** — AI & ML Engineer, specializing in Computer Vision, LLM applications, and Data Analytics.
+
+Built with:
+🟦 Astro  
+🟧 Svelte  
+💨 Tailwind CSS  
+🔷 TypeScript  
 
 ---
 
-## 📝 About
+## 📌 About
 
-This is the fourth iteration of my personal website.
+This is the official portfolio showcasing my work across:
 
-Previous iterations: [v1](https://liyunze-coding.github.io/old-portfolio), [v2](https://liyunze-coding.github.io/old-portfolio-2), [v3](https://liyunze-coding.github.io/website)
+- Machine Learning & Computer Vision  
+- AI/LLM Applications  
+- Data Science & Analytics  
+- MLOps & Deployment  
+- End-to-end product engineering  
 
-## 🚨 Forking this repo
+The website highlights my:
+- Professional experience  
+- Technical skillset  
+- Real-world AI/ML projects  
+- Contact details & personal brand  
 
-If you want to fork this repo, feel free to do so. However, I ask that you please give me credit by linking back to my website - https://rython.dev . Thanks!
+---
 
-## 📚 License
+## 🚀 Tech Stack
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+The portfolio is built with a modern, fast, and highly optimized stack:
 
-<!-- socials -->
+| Category | Tools |
+|---------|-------|
+| **Framework** | Astro + Svelte |
+| **Styling** | Tailwind CSS |
+| **Language** | TypeScript |
+| **Deployment** | Vercel |
+| **Animations** | Framer Motion / CSS Transitions |
+| **Assets** | Custom designs + motion graphics |
 
-## 📱 Socials
+---
 
-<a href="https://www.youtube.com/channel/UCaota2WuI4lJ3ts2NHrc6-w" target="_blank">
-<img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white">
-</a>
-<a href="https://www.twitch.tv/RythonDev" target="_blank">
-<img src="https://img.shields.io/twitch/status/rythondev?color=9146FF&label=Twitch&logo=twitch&logoColor=white&style=for-the-badge">
-</a>
+## 🛠️ Local Development
+
+To run the project locally:
+
+```bash
+npm install
+npm run dev
